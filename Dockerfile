@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
       && docker-php-ext-install -j$(nproc) intl \
       && docker-php-ext-install -j$(nproc) pdo_mysql \
       && docker-php-ext-install -j$(nproc) pdo_pgsql \
+      && docker-php-ext-install -j$(nproc) mysqli \
       && pecl install zip \
       && docker-php-ext-enable zip
 
