@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
       && docker-php-ext-install -j$(nproc) gd \
       && docker-php-ext-install -j$(nproc) pdo \
       && docker-php-ext-install -j$(nproc) mbstring \
+      && docker-php-ext-install -j$(nproc) exif \
       && docker-php-ext-configure intl \
       && docker-php-ext-configure pdo_pgsql \
       && docker-php-ext-install -j$(nproc) intl \
