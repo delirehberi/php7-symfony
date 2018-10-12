@@ -1,5 +1,4 @@
-# PHP7 Image for Symfony Development
-
+# PHP7.2 Image for Symfony Development
 
 ### Includes:
 
@@ -12,7 +11,4 @@
 - intl
 - zip
 - iconv
-- mcrypt
 - gd
-
-
