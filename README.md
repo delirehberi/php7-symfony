@@ -6,12 +6,13 @@ I used PHP-FPM as default so this docker file runs php-fpm.
 
 You can change default pool configuration with mounting your pool configuration to that point `/usr/local/etc/php-fpm.d/www.conf` 
 
-## Tags
+
+# Tags
 
 - delirehberi/php7-symfony:7.1
 - delirehberi/php7-symfony:7.3
 
-### Included Extensions and Tools:
+# Included Extensions and Tools:
 
 - composer
 - git
@@ -24,6 +25,7 @@ You can change default pool configuration with mounting your pool configuration 
 - iconv
 - mcrypt
 - gd
+
 
 ## Example docker-compose configuration
 
