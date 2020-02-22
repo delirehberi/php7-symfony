@@ -10,6 +10,7 @@ You can change default pool configuration with mounting your pool configuration 
 # Tags
 
 - delirehberi/php7-symfony:7.1
+- delirehberi/php7-symfony:7.2
 - delirehberi/php7-symfony:7.3
 
 # Included Extensions and Tools:
