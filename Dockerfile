@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.4-fpm
 RUN apt-get update && apt-get install -y \
       libfreetype6-dev \
       libjpeg62-turbo-dev \
@@ -8,13 +8,13 @@ RUN apt-get update && apt-get install -y \
       libpq-dev \
       libzip-dev \
       g++ \
-      libcurl4-gnutls-dev
+      libcurl4-gnutls-dev \ 
+      libonig-dev
 
 RUN docker-php-ext-install -j$(nproc) iconv \
-      && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+      && docker-php-ext-configure gd \ 
       && docker-php-ext-install -j$(nproc) gd \
       && docker-php-ext-install -j$(nproc) pdo \
-      && docker-php-ext-install -j$(nproc) mbstring \
       && docker-php-ext-install -j$(nproc) exif \
       && docker-php-ext-configure intl \
       && docker-php-ext-configure pdo_pgsql \

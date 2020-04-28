@@ -1,17 +1,15 @@
 # Preconfigured development environment for Symfony
 
-This docker file based official php docker file and includes some required extensions for Symfony development.
+The Symfony Docker Image is based official PHP-FPM docker file and it including several required and a few optional extensions for Symfony. Also, this docker image contains `composer` tool.
 
-I used PHP-FPM as default so this docker file runs php-fpm.
+You can create `www.conf` file for customized pool configuration and then you can mount it to the image with this path: `/usr/local/etc/php-fpm.d/www.conf`.
 
-You can change default pool configuration with mounting your pool configuration to that point `/usr/local/etc/php-fpm.d/www.conf` 
-
-
-# Tags
+# Available Tags
 
 - delirehberi/php7-symfony:7.1
 - delirehberi/php7-symfony:7.2
 - delirehberi/php7-symfony:7.3
+- delirehberi/php7-symfony:7.4
 
 # Included Extensions and Tools:
 
@@ -34,7 +32,7 @@ You can change default pool configuration with mounting your pool configuration 
 version: '3'
 services:
   php:
-    image: delirehberi/php7-symfony:7.3
+    image: delirehberi/php7-symfony:7.4
     ports:
       - 9000:9000
     volumes:
